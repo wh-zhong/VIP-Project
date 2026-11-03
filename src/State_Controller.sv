@@ -43,19 +43,15 @@ module State_Controller(
     // State Machine Control Logic
     always_comb begin: state_switch_logic
         next_state = current_state;
-        
         //  State Switching Logic
         case (current_state)
             SEEKING: begin
                 if(started && target_found)
                     next_state = ENGAGE;    
             end
-            
             ENGAGE: begin
                 next_state = ENGAGE; // State is returned to 0 when n_rst is called in always ff
-            end
-            
-            
+            end  
           // ARMING state is considered whenever btn is not triggered and start equals 1'b0  
          endcase
       end
@@ -65,7 +61,6 @@ module State_Controller(
         if (!n_rst) begin // If reset is called, reset all values to default state
             current_state <= SEEKING; // It's state is in seeking, but is only acted upon when started equals 1'b1
             started  <= 1'b0;
-            
         end else begin 
             current_state <= next_state;
             if(btn) begin
@@ -77,12 +72,10 @@ module State_Controller(
     always_comb begin: state_action_logic 
         seek_enable = 1'b0;
         engage_enable = 1'b0;
-        
         // State Enacting Logic
         case (current_state) 
             SEEKING: seek_enable = started;
             ENGAGE: engage_enable = 1'b1;
         endcase
-    end
-    
+    end    
 endmodule
