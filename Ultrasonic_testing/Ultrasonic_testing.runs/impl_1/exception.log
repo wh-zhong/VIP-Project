@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\mrman\Documents\Github\VIP-Project\Ultrasonic_testing\Ultrasonic_testing.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied

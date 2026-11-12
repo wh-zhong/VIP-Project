@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/mrman/Documents/Github/VIP-Project/test_project/test_project.srcs/constrs_1/new/led.xdc rfile:../../../test_project.srcs/constrs_1/new/led.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN G1 IOSTANDARD LVCMOS33 } [get_ports { switch } ]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN C13 IOSTANDARD LVCMOS33 } [get_ports { led } ]

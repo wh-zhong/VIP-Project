@@ -1,0 +1,281 @@
+
+*** Running vivado
+    with args -log servo_sweep_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source servo_sweep_top.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite ENTERPRISE license has been detected. Your current license is active and will expire on 28-dec-2026.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Thu Nov 12 12:07:49 2026
+# Process ID         : 29776
+# Current directory  : C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.runs/synth_1
+# Command line       : vivado.exe -log servo_sweep_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source servo_sweep_top.tcl
+# Log file           : C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.runs/synth_1/servo_sweep_top.vds
+# Journal file       : C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.runs/synth_1\vivado.jou
+# Running On         : WilliamsLaptop
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) Ultra 5 325
+# CPU Frequency      : 3110 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 16787 MB
+# Swap memory        : 15104 MB
+# Total Virtual      : 31891 MB
+# Available Virtual  : 9142 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Thu Nov 12 12:07:49 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source servo_sweep_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 593.523 ; gain = 268.270
+Command: read_checkpoint -auto_incremental -incremental C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/utils_1/imports/synth_1/servo_test.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/utils_1/imports/synth_1/servo_test.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top servo_sweep_top -part xc7s50csga324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28064
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1340.254 ; gain = 578.074
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'led3', assumed default net type 'wire' [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/sources_1/new/servo_sweep_top.sv:71]
+INFO: [Synth 8-6157] synthesizing module 'servo_sweep_top' [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/sources_1/new/servo_sweep_top.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'servo_sweep' [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/sources_1/new/servo_sweep.sv:23]
+	Parameter MIN_CYCLES bound to: 18'b011000011010100000 
+	Parameter MAX_CYCLES bound to: 18'b110000110101000000 
+INFO: [Synth 8-6155] done synthesizing module 'servo_sweep' (0#1) [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/sources_1/new/servo_sweep.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ramp' [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/sources_1/new/ramp.sv:22]
+	Parameter STEP bound to: 18'b000000010111011100 
+	Parameter START bound to: 18'b100100100111110000 
+INFO: [Synth 8-6155] done synthesizing module 'ramp' (0#1) [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/sources_1/new/ramp.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'servo_test' [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/sources_1/new/servo_test.sv:23]
+	Parameter CLK_HZ bound to: 100000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'servo_test' (0#1) [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/sources_1/new/servo_test.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'servo_sweep_top' (0#1) [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/sources_1/new/servo_sweep_top.sv:22]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1458.641 ; gain = 696.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1458.641 ; gain = 696.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1458.641 ; gain = 696.461
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1458.641 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/constrs_1/new/servo_sweep_top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'led3'. [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/constrs_1/new/servo_sweep_top.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/constrs_1/new/servo_sweep_top.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/constrs_1/new/servo_sweep_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.srcs/constrs_1/new/servo_sweep_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/servo_sweep_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/servo_sweep_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1530.414 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1530.512 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1530.512 ; gain = 768.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1530.512 ; gain = 768.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1530.512 ; gain = 768.332
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'target_reg' in module 'servo_sweep'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                                0 |               110000110101000000
+                  iSTATE |                                1 |               011000011010100000
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'target_reg' using encoding 'sequential' in module 'servo_sweep'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1530.512 ; gain = 768.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   19 Bit       Adders := 1     
+	   2 Input   18 Bit       Adders := 3     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   18 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 1544.184 ; gain = 782.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:53 . Memory (MB): peak = 1681.301 ; gain = 919.121
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1712.367 ; gain = 950.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1712.367 ; gain = 950.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 1967.938 ; gain = 1205.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 1967.938 ; gain = 1205.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 1967.938 ; gain = 1205.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 1967.938 ; gain = 1205.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 1967.938 ; gain = 1205.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 1967.938 ; gain = 1205.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    32|
+|3     |LUT1   |    28|
+|4     |LUT2   |    13|
+|5     |LUT3   |    13|
+|6     |LUT4   |    33|
+|7     |LUT5   |     9|
+|8     |LUT6   |     5|
+|9     |FDRE   |    31|
+|10    |FDSE   |     8|
+|11    |IBUF   |     3|
+|12    |OBUF   |     3|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:01:01 . Memory (MB): peak = 1967.938 ; gain = 1205.758
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 1967.938 ; gain = 1133.887
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:02 . Memory (MB): peak = 1967.938 ; gain = 1205.758
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1976.078 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1979.742 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: e467693
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:13 . Memory (MB): peak = 1979.742 ; gain = 1378.328
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1979.742 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/mrman/Documents/Github/VIP-Project/servo_testing/servo_testing.runs/synth_1/servo_sweep_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file servo_sweep_top_utilization_synth.rpt -pb servo_sweep_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 12 12:09:26 2026...
